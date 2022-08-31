@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    ---color-menu:#256D85;
+    --colorp:#FBDF07;
+    --colorshadow:#00000090;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.container__master{
+    height: 100%;
+}
+
+.container__box{
+    background-color: #FBDF07;
+    /* background-image: url(/assets/taxi-porfolio.jpg);  */
+    background-size: cover;
+    
+}
+
+.nav{
+    color: black;
+    --var--hamburguesa:scale(1);
+    --var--close:scale(0);
+    --varmenu:translate(-100%);
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2,max-content);
+}
+
+.nav:target{
+    --var--hamburguesa:scale(0);
+    --var--close:scale(1);
+    --varmenu:translate(0);
+}
+
+
+.nav__tittle{
+    font-size: 2.5rem;
+    z-index: 1;
+
+}
+
+
+
+.nav__hamburger,
+.nav__close{
+
+    display: grid;
+    cursor: pointer;
+    grid-column:-1/-2;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburger{
+    transform: var(--var--hamburguesa);
+
+
+}
+
+.nav__close{
+    transform: var(--var--close);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+
+.nav__links{
+    background-color: #FBDF07;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+    transform: var(--varmenu);
+    transition: .3s transform;
+
+}
+
+.nav__item{
+    list-style: none;
+    
+
+}
+
+.nav__link{
+    color:black;
+    text-decoration: none;
+    font-size:1.2rem;
+    letter-spacing:2px;
+    font-weight: 700;
+}
+
+.container__body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 1fr 500px;
+    padding: 1rem;
+}
+
+.container__body p{
+    text-align: center;
+}
+
+.home{
+    padding-top: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.home .box-img-home img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding:0.5rem;
+    border: 2px solid black;
+    box-shadow: 12px 9px 22px -4px rgba(0,0,0,0.75);
+    
+    
+
+}
+
+.home p{
+    padding: 1em;
+    background-color: var(--colorshadow);
+    border-radius: 0.3em;
+    color: black;
+    
+}
+
+.porfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.porfolio h2{
+    
+    /* text-align: center; */
+    grid-column: 2/5;
+    
+}
+
+.porfolio i{
+    padding: 0.4rem;
+    font-size: 2.5rem;
+    transition:1s transform;
+    
+    
+}
+.porfolio p{
+    padding: 1em;
+    background-color: var(--colorshadow);
+    border-radius: 0.3em;
+    color: black;
+}
+.porfolio i:hover{
+    background-color: black;
+    color: #FBDF07;
+    border-radius: 1rem;
+    /* transform: scale(100px); */
+
+}
+
+.container_img{
+    width: 300px;
+    
+
+}
+.container_img img{
+    height: 200px;
+    width: 200px;
+    box-shadow: 12px 9px 22px -4px rgba(0,0,0,0.75);
+}
+
+
+
+
+.contact{
+    text-align: center;
+}
+
+.contact form{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    border-style: none;
+    border-style: none;
+}
+
+
+.contact .summit{
+    display: flex;
+    justify-content: center;
+    border-style: none;
+    padding: 1rem;
+    color: #FBDF07;
+    background-color: black;
+    border-radius: 1rem;
+    width: 100%;
+    box-shadow: 12px 9px 22px -4px rgba(0,0,0,0.75);
+}
+
+.container_socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.container_socials i{
+    
+    padding: 0.4rem;
+    font-size: 2.5rem;
+
+}
+
+.container_socials a{
+    color: black;
+}
+footer {
+    background-color: black;
+    color: #FBDF07;
+    text-align: center;
+}
+
+
+
+@media (min-width:768px) {
+    .nav{
+
+        --var--hamburguesa:scale(0);
+
+        --varmenu:translate(0);
+
+    }
+
+    .nav:target{
+
+        --var--close:scale(0);
+
+    }
+
+    .nav__links{
+        padding: 0;
+        grid-auto-flow: column;
+        background-color:unset;
+        position: unset;
+        gap: 1.5em;
+        transform: unset;
+        grid-column: -2/-1;
+
+    }
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+        color: black;
+    }
+
+    .container__body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr 700px;
+        padding: 1rem;
+    }
+    
+    .home p{
+        color: var(--colorp);
+    }
+
+    .porfolio h2{
+        text-align: center;
+        font-size: 2.5rem;
+        color: black;
+        padding: 1rem;
+        
+    }
+    .porfolio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color:var(--colorshadow) ; */
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .porfolio i{
+        display: flex;
+        padding: .3rem;
+        font-size: 3rem;
+        flex-direction: column-reverse;
+        color: black;
+        
+        
+    }
+
+    .porfolio p{
+        color: var(--colorp);
+    }
+
+    .container_img{
+        padding: 2rem;
+    }
+
+    .container_img img{
+        
+        height:100%;
+        width: 100%;
+    }  
+
+    .contact{
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .contact h2{
+        font-size: 2.5rem;
+
+    }
+
+    .contact .box_input_name input{
+        height: 50px;
+        width: 100%;
+    }
+
+    .contact .box_input_email input{
+        height: 50px;
+        width: 100%;
+    }
+
+    .contact .box_input_area textarea{
+        height: 200px;
+        width: 100%;
+    }
+    
+
+    }
+    
