@@ -293,7 +293,12 @@ footer {
         color: black;
     }
 
+    
+
     .container__body{
+        background-image: url(./assets/fondo-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 400px 1fr 700px;
@@ -302,6 +307,7 @@ footer {
     
     .home p{
         color: var(--colorp);
+        background-color: black;
     }
 
     .porfolio h2{
@@ -309,6 +315,7 @@ footer {
         font-size: 2.5rem;
         color: black;
         padding: 1rem;
+        background-color: black;
         
     }
     .porfolio{
@@ -326,12 +333,14 @@ footer {
         font-size: 3rem;
         flex-direction: column-reverse;
         color: black;
+        background-color: black;
         
         
     }
 
     .porfolio p{
         color: var(--colorp);
+        background-color: black;
     }
 
     .container_img{
@@ -355,6 +364,11 @@ footer {
 
     .contact h2{
         font-size: 2.5rem;
+        color: var(--colorp);
+        border:5px solid black;
+        border-radius: 1rem;
+        background-color: black;
+        padding: 1rem;
 
     }
 
@@ -372,7 +386,23 @@ footer {
         height: 200px;
         width: 100%;
     }
-    
+    .contact .summit{
+        background-color: var(--colorp);
+        color: black;
+    }
 
+    .porfolio i{
+        color: var(--colorp);
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+    .porfolio h2{
+        color: var(--colorp);
+        border:5px solid black;
+        border-radius: 1rem;
+    }
+    .container_socials a{
+        color: var(--colorp);
+    }
     }
     
